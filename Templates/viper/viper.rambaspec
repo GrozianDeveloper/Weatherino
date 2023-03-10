@@ -1,0 +1,33 @@
+# Template information section
+name: "armyxomuil_viper"
+summary: "VIPER module template. Used in ArmyXomuiL's progects'"
+author: "ArmyXomuiL"
+version: "1.1.0"
+license: "ArmyXomuiL"
+
+# The declarations for code files
+code_files:
+# Header layer
+- {name: Header/IO.swift, path: Code/Header/io.swift.liquid}
+- {name: Header/Header.swift, path: Code/Header/header.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/InteractorIO.swift, path: Code/Interactor/interactorIO.swift.liquid}
+- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Controller layer
+- {name: Controller/ControllerIO.swift, path: Code/Controller/controllerIO.swift.liquid}
+- {name: Controller/ViewController.swift, path: Code/Controller/viewController.swift.liquid}
+
+# Model layer
+- {name: Model/Model.swift, path: Code/Model/model.swift.liquid}
+
+# UI layer
+- {name: UI/.storyboard, path: Code/UI/storyboard.storyboard.liquid}
+
+# The declarations for test files
+
+# Template dependencies

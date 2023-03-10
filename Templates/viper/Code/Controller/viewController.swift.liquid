@@ -1,0 +1,54 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ prefix }}{{ module_info.name }}ViewController: UIViewController {
+
+    
+    //MARK: - Presenter
+
+    var presenter: {{ prefix }}{{ module_info.name }}ControllerDelegate?
+    
+    
+    //MARK: - Outlets
+    
+    
+    //MARK: - Overrides methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.didReadyToWork()
+    }
+    
+    
+    //MARK: - Actions
+    
+    
+}
+
+
+//MARK: - Public methods
+
+extension {{ prefix }}{{ module_info.name }}ViewController {
+
+}
+
+
+//MARK: - Private methods
+
+private extension {{ prefix }}{{ module_info.name }}ViewController {
+
+}
+
+
+//MARK: - {{ prefix }}{{ module_info.name }}ControllerInterface
+
+extension {{ prefix }}{{ module_info.name }}ViewController: {{ prefix }}{{ module_info.name }}ControllerInterface {
+
+}

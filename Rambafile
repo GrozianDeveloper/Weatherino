@@ -1,0 +1,33 @@
+### Headers settings
+company: Mine
+
+### Xcode project settings
+project_name: Weatherino
+xcodeproj_path: Weatherino.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: Weatherino
+
+# The file path for new modules
+project_file_path: Weatherino/Classes/Modules
+
+# The Xcode group path to new modules
+project_group_path: Weatherino/Classes/Modules
+
+### Tests generation settings section
+# The tests target name
+test_target: WeatherinoTests
+
+# The file path for new tests
+test_file_path: WeatherinoTests
+
+# The Xcode group path to new tests
+test_group_path: WeatherinoTests
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: viper}

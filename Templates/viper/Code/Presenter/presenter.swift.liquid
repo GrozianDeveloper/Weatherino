@@ -1,0 +1,47 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+final class {{ prefix }}{{ module_info.name }}Presenter: NSObject {
+
+
+    //MARK: - Variables
+    
+    var interactor: {{ prefix }}{{ module_info.name }}InteractorInterface?
+    weak var root: {{ prefix }}{{ module_info.name }}Delegate?
+    weak var controller: {{ prefix }}{{ module_info.name }}ControllerInterface?
+
+
+    //MARK: - Init
+
+
+}
+
+
+//MARK: - {{ prefix }}{{ module_info.name }}Interface
+
+extension {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}Interface {
+
+}
+
+
+//MARK: - {{ prefix }}{{ module_info.name }}ControllerDelegate
+
+extension {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}ControllerDelegate {
+    func didReadyToWork() {
+
+    }
+}
+
+
+//MARK: - {{ prefix }}{{ module_info.name }}InteractorDelegate
+
+extension {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}InteractorDelegate {
+
+}

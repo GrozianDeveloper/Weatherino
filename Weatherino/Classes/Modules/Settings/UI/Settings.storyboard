@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="mSE-LO-7Q1">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="XfJ-i2-hph" customClass="SettingsViewController" customModule="Weatherino" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uMK-Wl-6yi"/>
+                        <viewControllerLayoutGuide type="bottom" id="RHf-rQ-Fjq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hb4-lK-4NM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buQ-3y-Xdr">
+                                <rect key="frame" x="116.66666666666667" y="401" width="159.66666666666663" height="50.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-NS-Omf">
+                                        <rect key="frame" x="8.0000000000000036" y="8" width="49.333333333333343" height="34.333333333333336"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="sun.min.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="changeThemeButtonDidTap:" destination="XfJ-i2-hph" eventType="touchUpInside" id="gw4-E5-UJB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q75-MU-bMq">
+                                        <rect key="frame" x="57.333333333333329" y="8" width="49" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="moon.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="changeThemeButtonDidTap:" destination="XfJ-i2-hph" eventType="touchUpInside" id="Xhl-a6-QCC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0W-Iy-SRv">
+                                        <rect key="frame" x="106.33333333333333" y="8" width="45.333333333333329" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="iphone" catalog="system"/>
+                                        <connections>
+                                            <action selector="changeThemeButtonDidTap:" destination="XfJ-i2-hph" eventType="touchUpInside" id="jvn-S3-Sjg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRH-BD-Hrs">
+                                <rect key="frame" x="101.00000000000001" y="531.33333333333337" width="191.33333333333337" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Remove all controllers"/>
+                                <connections>
+                                    <action selector="changeRootControllerButtonTaped:" destination="XfJ-i2-hph" eventType="touchUpInside" id="FOj-Xh-6hC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="buQ-3y-Xdr" firstAttribute="centerX" secondItem="hb4-lK-4NM" secondAttribute="centerX" id="9JR-7T-DUq"/>
+                            <constraint firstItem="buQ-3y-Xdr" firstAttribute="centerY" secondItem="hb4-lK-4NM" secondAttribute="centerY" id="XG9-uR-0Kc"/>
+                            <constraint firstItem="XRH-BD-Hrs" firstAttribute="top" secondItem="buQ-3y-Xdr" secondAttribute="bottom" constant="80" id="XTx-WL-9Iy"/>
+                            <constraint firstItem="XRH-BD-Hrs" firstAttribute="centerX" secondItem="hb4-lK-4NM" secondAttribute="centerX" id="Xy4-T9-oan"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeRootControllerButton" destination="XRH-BD-Hrs" id="S0K-RK-gGA"/>
+                        <outlet property="themeButtonsView" destination="buQ-3y-Xdr" id="gbp-hi-VsA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N12-cz-MKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="510"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iphone" catalog="system" width="112" height="128"/>
+        <image name="moon.fill" catalog="system" width="128" height="123"/>
+        <image name="sun.min.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="mSE-LO-7Q1">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="XfJ-i2-hph" customClass="MapViewController" customModule="Weatherino" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uMK-Wl-6yi"/>
+                        <viewControllerLayoutGuide type="bottom" id="RHf-rQ-Fjq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hb4-lK-4NM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgt-sP-F5f" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpY-Vw-O6H" userLabel="TabBarHolder">
+                                <rect key="frame" x="121.66666666666669" y="752" width="150" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Brp-eg-fD3"/>
+                                    <constraint firstAttribute="width" constant="150" id="a61-8X-1f2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXq-Cq-Jub" customClass="LoadableButton" customModule="Weatherino" customModuleProvider="target">
+                                <rect key="frame" x="25.666666666666671" y="752" width="56" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="euk-fY-lf1"/>
+                                    <constraint firstAttribute="width" secondItem="lXq-Cq-Jub" secondAttribute="height" id="rOu-XS-SON"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.up" catalog="system" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="toggleListVisability:" destination="XfJ-i2-hph" eventType="touchUpInside" id="vcl-qw-Xrq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scs-qN-oBb">
+                                <rect key="frame" x="311.66666666666669" y="752" width="56" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="scs-qN-oBb" secondAttribute="height" id="N3y-gc-7eA"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="location.north.fill" catalog="system" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="goToMyLocation:" destination="XfJ-i2-hph" eventType="touchUpInside" id="HXk-Wf-JeK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="scs-qN-oBb" firstAttribute="leading" secondItem="XpY-Vw-O6H" secondAttribute="trailing" constant="40" id="DbY-Pm-BiZ"/>
+                            <constraint firstItem="Cgt-sP-F5f" firstAttribute="leading" secondItem="hb4-lK-4NM" secondAttribute="leading" id="Dtd-IT-Mqi"/>
+                            <constraint firstAttribute="bottom" secondItem="Cgt-sP-F5f" secondAttribute="bottom" id="PoJ-9J-s99"/>
+                            <constraint firstAttribute="trailing" secondItem="Cgt-sP-F5f" secondAttribute="trailing" id="Xvt-TK-46L"/>
+                            <constraint firstItem="Cgt-sP-F5f" firstAttribute="top" secondItem="hb4-lK-4NM" secondAttribute="top" id="Yiu-AB-lCB"/>
+                            <constraint firstItem="lXq-Cq-Jub" firstAttribute="centerY" secondItem="XpY-Vw-O6H" secondAttribute="centerY" id="Zgs-Gb-8QC"/>
+                            <constraint firstItem="XpY-Vw-O6H" firstAttribute="centerX" secondItem="hb4-lK-4NM" secondAttribute="centerX" id="ZqZ-WQ-7Z3"/>
+                            <constraint firstItem="RHf-rQ-Fjq" firstAttribute="top" secondItem="XpY-Vw-O6H" secondAttribute="bottom" constant="10" id="bNd-28-4aC"/>
+                            <constraint firstItem="scs-qN-oBb" firstAttribute="width" secondItem="lXq-Cq-Jub" secondAttribute="width" id="hmL-8M-XLU"/>
+                            <constraint firstItem="scs-qN-oBb" firstAttribute="centerY" secondItem="XpY-Vw-O6H" secondAttribute="centerY" id="rr8-0l-f31"/>
+                            <constraint firstItem="XpY-Vw-O6H" firstAttribute="leading" secondItem="lXq-Cq-Jub" secondAttribute="trailing" constant="40" id="vu6-IP-Opj"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="Cgt-sP-F5f" id="XmR-El-AKe"/>
+                        <outlet property="myLocattionButton" destination="scs-qN-oBb" id="aEH-hc-aZ4"/>
+                        <outlet property="toggleListVisabilityButton" destination="lXq-Cq-Jub" id="iPv-ch-0k1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N12-cz-MKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527.48091603053433" y="509.85915492957747"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.up" catalog="system" width="128" height="70"/>
+        <image name="location.north.fill" catalog="system" width="110" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
